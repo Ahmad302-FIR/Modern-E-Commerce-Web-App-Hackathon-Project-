@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoShop - Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">EcoShop</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <span class="user-name" id="userName"></span>
+        <a href="wishlist.html" class="icon-link">
+          <i class="fas fa-heart"></i>
+          <span class="badge" id="wishlistBadge">0</span>
+        </a>
+        <a href="cart.html" class="icon-link">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="badge" id="cartBadge">0</span>
+        </a>
+        <button class="theme-toggle" id="themeToggle">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="btn btn-primary" id="logoutBtn" style="display: none">
+          Logout
+        </button>
+      </div>
+    </nav>
+
+    <section class="hero-slider">
+      <div class="slider-container">
+        <div class="slide active">
+          <img
+            src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1200"
+            alt="Sale"
+          />
+          <div class="slide-content">
+            <h2>Summer Sale</h2>
+            <p>Up to 50% off on selected items</p>
+            <button>Shop Now</button>
+          </div>
+        </div>
+        <div class="slide">
+          <img
+            src="https://images.unsplash.com/photo-1607082350899-7e105aa886ae?w=1200"
+            alt="New Arrivals"
+          />
+          <div class="slide-content">
+            <h2>New Arrivals</h2>
+            <p>Check out our latest products</p>
+            <button>Explore</button>
+          </div>
+        </div>
+        <div class="slide">
+          <img
+            src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=1200"
+            alt="Free Shipping"
+          />
+          <div class="slide-content">
+            <h2>Free Shipping</h2>
+            <p>On orders above $50</p>
+            <button>Learn More</button>
+          </div>
+        </div>
+      </div>
+      <button class="slider-btn prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="slider-btn next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-header">
+        <h2>Our Products</h2>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+          />
+        </div>
+        <div class="filters">
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+          </select>
+          <select id="sortFilter">
+            <option value="default">Sort By</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Rating</option>
+          </select>
+        </div>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+      <div class="pagination" id="pagination"></div>
+    </section>
+
+    <script src="js/theme.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
